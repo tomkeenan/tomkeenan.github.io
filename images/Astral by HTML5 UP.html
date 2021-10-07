@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!-- saved from url=(0114)http://localhost:63342/Portfolio_HTML/index.html?_ijt=10lsbdvjbphmmleqi8q325elqv&_ij_reload=RELOAD_ON_SAVE#contact -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Astral by HTML5 UP</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="./Astral by HTML5 UP_files/main.css">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="vsc-initialized">
+
+		<!-- Wrapper-->
+			<div id="wrapper">
+
+				<!-- Nav -->
+					<nav id="nav">
+						<a href="http://localhost:63342/Portfolio_HTML/index.html?_ijt=10lsbdvjbphmmleqi8q325elqv&amp;_ij_reload=RELOAD_ON_SAVE#" class="icon solid fa-home"><span>Home</span></a>
+						<a href="http://localhost:63342/Portfolio_HTML/index.html?_ijt=10lsbdvjbphmmleqi8q325elqv&amp;_ij_reload=RELOAD_ON_SAVE#work" class="icon solid fa-folder"><span>Work</span></a>
+						<a href="http://localhost:63342/Portfolio_HTML/index.html?_ijt=10lsbdvjbphmmleqi8q325elqv&amp;_ij_reload=RELOAD_ON_SAVE#contact" class="icon solid fa-envelope active"><span>Contact</span></a>
+						<a href="https://github.com/tomkeenan" class="icon brands fa-github"><span>Github</span></a>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Me -->
+							<article id="home" class="panel intro inactive" style="display: none;">
+								<header>
+									<h1>Tom Keenan</h1>
+									<p>3rd Year Computer Science</p>
+								</header>
+								<a href="http://localhost:63342/Portfolio_HTML/index.html?_ijt=10lsbdvjbphmmleqi8q325elqv&amp;_ij_reload=RELOAD_ON_SAVE#work" class="jumplink pic">
+									<span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
+									<img src="./Astral by HTML5 UP_files/me.jpg" alt="">
+								</a>
+							</article>
+
+						<!-- Work -->
+							<article id="work" class="panel inactive" style="display: none;">
+								<header>
+									<h2>Projects</h2>
+								</header>
+								<p>
+									Projects that I have completed since I began my degree in 2019.
+								</p>
+								<section>
+									<div class="row">
+										<div class="col-4 col-6-medium col-12">
+											<a href="http://localhost:63342/Portfolio_HTML/index.html?_ijt=10lsbdvjbphmmleqi8q325elqv&amp;_ij_reload=RELOAD_ON_SAVE#" class="image fit"><img src="./Astral by HTML5 UP_files/webscraper_icon.png" alt=""></a>
+										</div>
+									</div>
+
+								</section>
+							</article>
+
+						<!-- Contact -->
+							<article id="contact" class="panel">
+								<header>
+									<h2>About</h2>
+								</header>
+								<p>
+									My name is Tom yadda yadda yadda
+								</p>
+
+								<header>
+									<h2>Education</h2>
+								</header>
+								<header>
+									<h4>University College Dublin</h4>
+								</header>
+								<p>
+									Certificate in Open Learning (2018-2019)
+									Computer Science (2019 - Present)
+									First Year GPA: 3.92;
+									Second Year GPA: 3.69
+
+								</p>
+
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<div id="footer">
+						<ul class="copyright">
+							<li>© Untitled.</li><li>Design: <a href="http://html5up.net/">HTML5 UP</a></li>
+						</ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="./Astral by HTML5 UP_files/jquery.min.js"></script>
+			<script src="./Astral by HTML5 UP_files/browser.min.js"></script>
+			<script src="./Astral by HTML5 UP_files/breakpoints.min.js"></script>
+			<script src="./Astral by HTML5 UP_files/util.js"></script>
+			<script src="./Astral by HTML5 UP_files/main.js"></script>
+
+	
+<script>
+(function() {
+  var ws = new WebSocket('ws://' + window.location.host + '/jb-server-page?reloadServiceClientId=89');
+  ws.onmessage = function (msg) {
+      if (msg.data === 'reload') {
+          window.location.reload();
+      }
+      if (msg.data.startsWith('update-css ')) {
+          var messageId = msg.data.substring(11);
+          var links = document.getElementsByTagName('link');
+          for (var i = 0; i < links.length; i++) {
+              var link = links[i];
+              if (link.rel !== 'stylesheet') continue;
+              var clonedLink = link.cloneNode(true);
+              var newHref = link.href.replace(/(&|\?)jbUpdateLinksId=\d+/, "$1jbUpdateLinksId=" + messageId);
+              if (newHref !== link.href) {
+                clonedLink.href = newHref;
+              }
+              else {
+                var indexOfQuest = newHref.indexOf('?');
+                if (indexOfQuest >= 0) {
+                  // to support ?foo#hash 
+                  clonedLink.href = newHref.substring(0, indexOfQuest + 1) + 'jbUpdateLinksId=' + messageId + '&' + 
+                                    newHref.substring(indexOfQuest + 1);
+                }
+                else {
+                  clonedLink.href += '?' + 'jbUpdateLinksId=' + messageId;
+                }
+              }
+              link.replaceWith(clonedLink);
+          }
+      }
+  };
+})();
+</script></body></html>

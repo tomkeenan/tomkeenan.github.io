@@ -1,0 +1,204 @@
+<!DOCTYPE HTML>
+<!--
+	Astral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Tom Keenan Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper-->
+			<div id="wrapper">
+
+				<!-- Nav -->
+					<nav id="nav">
+						<a href="#" class="icon solid fa-home"><span>Home</span></a>
+						<a href="#contact" class="icon solid fa-user"><span>About</span></a>
+						<a href="#work" class="icon solid fa-folder"><span>Work</span></a>
+						<a href="https://github.com/tomkeenan" class="icon brands fa-github"><span>Github</span></a>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Me -->
+							<article id="home" class="panel intro">
+								<header>
+									<h1>Tom Keenan</h1>
+									<p>3rd Year Computer Science</p>
+								</header>
+								<a href="#contact" class="jumplink pic">
+<!--									<span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>-->
+									<img src="images/me.jpg" alt="" />
+								</a>
+							</article>
+
+						<!-- Work -->
+							<article id="work" class="panel">
+								<header>
+									<h2>Projects</h2>
+								</header>
+								<p>
+									Projects that I have completed since I began my degree in 2019.
+								</p>
+									<section class="posts">
+										<!---RISK GAME IN JAVA --->
+										<article>
+											<header>
+												<!--<span class="date">Java</span>-->
+												<h2>Risk Game with Bot AI<br />
+													</a></h2>
+											</header>
+											<a class="image fit"><img src="images/risk_icon.png" alt="" /></a>
+											<p>Risk board game implemented in Java.</p>
+											<ul class="actions special">
+												<li><a href="#risk" class="button project">More info</a></li>
+											</ul>
+										</article>
+
+										<!---WEBSCRAPER IN PYTHON --->
+										<article>
+											<header>
+												<!--<span class="date">Python</span>-->
+												<h2>Dublin House Rental Webscraper<br />
+													</a></h2>
+											</header>
+											<a class="image fit"><img src="images/webscraper_icon.png" alt="" /></a>
+											<p>Webscraper built in Python utilising BeautifulSoup, Selenium, Pandas and Tkinter. </p>
+											<ul class="actions special">
+												<li><a href="#webscraper" class="button project">More info</a></li>
+											</ul>
+										</article>
+
+										<!---APORIA --->
+										<article>
+											<header>
+												<!--<span class="date">Business</span>-->
+												<h2>Eco-Concious Clothing Brand<br />
+													</a></h2>
+											</header>
+											<a class="image fit"><img src="images/aporia_icon.png" alt="" /></a>
+											<p>Ethically sourced, high quality essential clothing.</p>
+											<ul class="actions special">
+												<li><a href="#aporia" class="button project">More info</a></li>
+											</ul>
+										</article>
+								</section>
+							</article>
+
+						<!-- Contact -->
+							<article id="contact" class="panel">
+								<header>
+									<h2>About</h2>
+								</header>
+								<p>
+									My name is Tom yadda yadda yadda
+								</p>
+
+								<header>
+									<h2>Education</h2>
+								</header>
+								<header>
+									<h4>University College Dublin</h4>
+									<p>
+										<li>Certificate in Open Learning (2018-2019)<br>
+										<li>Computer Science (2019 - Present)<br>
+										<p style="margin-left: 40px">
+									<font size="-0.25">First Year GPA: 3.92</font><br>
+									<font size="-0.25">Second Year GPA: 3.69</font><br>
+								</p>
+
+
+
+									</p>
+								</header>
+
+
+							</article>
+
+						<!-- RISK DETAILS -->
+						<article id="risk" class="panel">
+							<header>
+								<h2>RISK</h2>
+							</header>
+							<p>Risk Game created for the Software Engineering module in Second Year. My teammate and I were
+							tasked with implementing the Risk board game in Java. We decided to use JavaFX to give ourselves
+							the most flexibility and allow ourselves to get creative. We deviated significantly from the sample
+							solution code , which you will see below as our Bot was made to run on it. We received a perfect grade
+							for this project.</p>
+							<p>The foundation of our game lies on the "pixel map" we created. We created a grid of 5x5 squares, giving us
+							a screen of pixels which we had full control over. We then created the map on top, tracking which pixels were
+							countries/borders or the ocean.</p>
+							<a class="image fit"><img src="gifs/risk_start.gif" alt="" /></a>
+							<p>The countries are randomly divided among the players at the start of the game. A country owned by a player changes to their
+							colour. The pixel map allowed us to have the pleasant animation of the grey countries filling with colour as the game begins.</p>
+							<a class="image fit"><img src="gifs/risk_takeOver.gif" alt="" /></a>
+							<p>There are two prominent features shown in this gif. The first is that clicking on a country will fill the text box with its name.
+							Part of the assignment specification was string validation and as such it was required that the user type in country names. We thought this interrupted
+							the flow of the game, it is still present but the player can also simply click the country to save time.</p>
+							<p>The second is the conquering animation. When a player takes over a country, a breadth first search is initiated from
+							a central node, changing the colour and terminating when a border is reached.</p>
+						</article>
+
+						<!-- WEBSCRAPER DETAILS -->
+						<article id="webscraper" class="panel">
+							<header>
+								<h2>WEBSCRAPER</h2>
+							</header>
+							<p>Webscraper I built in Python to help in finding a house to rent. It scrapes data from the four
+							largest property websites in Ireland - (daft.ie, let.ie, myhome.ie and rent.ie) and stores the data
+							in a csv file. It then converts the csv to a dataframe to allow filtering and a cleaner method to display the data.</p>
+							<p>The program will begin scraping after clicking the start button. This will take approximately 7 minutes.
+								Scraping from daft.ie takes the longest amount of time as it's website is partially loaded with javascript. I used Selenium
+								to open a headless browser of Google Chrome and then got the data I needed from there using BeautfiulSoup. BeautifulSoup
+								on it's own was enough for the rest of the websites.</p>
+							<a class="image fit"><img src="gifs/webscraper_load.gif" alt="" /></a>
+							<p>The load properties button will load all properties found into the display on the GUI. Some properties have a price
+							of 0, this is the default value for properties with no price.</p>
+							<a class="image fit"><img src="gifs/webscraper_loadnew.gif" alt="" /></a>
+							<p>The load new properties will load all new properties found since the last search. This allows for quick checking of recently added
+							properties.</p>
+							<a class="image fit"><img src="gifs/webscraper_filter.gif" alt="" /></a>
+							<p>Filter functionality for the price per month and the number of beds. These two attributes were uniform across
+							the four websites while also being the key elements that I was looking for in a rental home. </p>
+							<a class="image fit"><img src="gifs/webscraper_link.gif" alt="" /></a>
+							<p>Double clicking the link will open it in your browser.</p>
+						</article>
+						<article id="aporia" class="panel">
+							<header>
+								<h2>APORIA</h2>
+							</header>
+							<p>
+								APORIA
+							</p>
+						</article>
+
+
+					</div>
+
+				<!-- Footer -->
+					<div id="footer">
+						<ul class="copyright">
+							<li></li>
+						</ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+
+	</body>
+</html>
